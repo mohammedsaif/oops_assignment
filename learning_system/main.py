@@ -37,6 +37,9 @@ if __name__ == "__main__":
 
     instructor2.create_course(course3)
 
+    instructor1.display_courses()
+    instructor2.display_courses()
+
     student1.enroll_course(course1)
     student2.enroll_course(course2)
     student2.enroll_course(course2)
@@ -44,15 +47,15 @@ if __name__ == "__main__":
     student1.view_enroll_course()
     student2.view_enroll_course()
 
-    student1.check_progress(123)
+    student1.check_progress(1245)
 
-    student2.check_progress(321)
+    student2.check_progress(4567)
 
-    student1.update_progress(123, 60)
-    student2.update_progress(321, 40)
-    student1.check_progress(123)
-    
-    student2.check_progress(321)
+    student1.update_progress(1245, 60)
+    student2.update_progress(4567, 40)
+    student1.check_progress(1245)
+
+    student2.check_progress(4567)
 
 
   
