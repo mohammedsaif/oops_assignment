@@ -22,6 +22,30 @@ def display_vehicles():
                 print(f"   Rate   : ₹{vehicle.price_per_km}/KM")
                 print()
 
+def calculate_trip_fares():
+    trips = [
+        (car1, 12),
+        (car2, 25.5),
+        (bike1, 8),
+        (bike2, 15),
+    ]
+
+    print("\n---------------------------")
+    print("Multiple Trip Fares")
+    print("---------------------------")
+    total = 0
+    for vehicle, distance in trips:
+        fare = vehicle.calculate_fare(distance)
+        total += fare
+        print(
+            f"{vehicle.vehicle_type()} ({vehicle.brand}, {vehicle.vehicle_number}) - "
+            f"{distance} KM - ₹{fare}"
+        )
+    print("---------------------------")
+    print(f"Total Fare for All Trips: ₹{total}")
+    print("---------------------------")
+
+
 def book_cab():
     print("++++++ cab booking system");
     print("")
@@ -61,7 +85,8 @@ def main():
      while True:
 
         print("\n1. Book Cab")
-        print("2. Exit")
+        print("2. Calculate Fares for Multiple Trips")
+        print("3. Exit")
 
         choice = input("Enter your choice: ")
 
@@ -69,6 +94,9 @@ def main():
             book_cab()
 
         elif choice == "2":
+            calculate_trip_fares()
+
+        elif choice == "3":
             print("Thank you for using Cab Booking System.")
             break
 
