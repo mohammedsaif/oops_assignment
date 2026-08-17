@@ -3,8 +3,8 @@ from warrior import Warrior
 from wizard import Wizard
 
 if __name__ == "__main__":
-    thorin = Warrior(name="Thorin", health=100, level=5, sword=15)
-    legolas = Archer(name="Legolas", health=80, level=6, arrows=10)
+    thorin = Warrior(name="Thorin", health=100, level=5, sword=25)
+    legolas = Archer(name="Legolas", health=80, level=6, arrows=30)
     gandalf = Wizard(name="Gandalf", health=70, level=8, magic=50)
 
     # Show initial states
